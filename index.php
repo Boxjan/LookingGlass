@@ -85,7 +85,7 @@ if (file_exists('LookingGlass/Config.php')) {
                   }
                 ?></p>
               </div>
-              <p>Your IP Address: <b><a href="#tests" id="userip"><?php echo $_SERVER['REMOTE_ADDR']; ?></a></b></p>
+              <p>Your IP Address: <b><a href="#tests" id="userip"><?php echo isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR']; ?></a></b></p>
             </div>
           </div>
         </div>
